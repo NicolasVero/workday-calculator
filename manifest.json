@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Calculette de Dépointage",
+    "version": "1.0",
+    "description": "Calcule l'heure de départ après 7h de travail.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": []
+}
