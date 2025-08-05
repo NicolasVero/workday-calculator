@@ -32,8 +32,22 @@ function calculate_departure_time() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	document.getElementById('arrival_morning').focus();
 	const inputs = document.querySelectorAll('input[type="time"]');
-	inputs.forEach(input => {
+
+	inputs.forEach((input, index) => {
 		input.addEventListener('change', calculate_departure_time);
+
+		input.addEventListener('keydown', (e) => {
+			if (e.key === 'Tab') {
+				e.preventDefault();
+				input.blur();
+
+				const nextInput = inputs[index + 1];
+				if (nextInput) {
+					nextInput.focus();
+				}
+			}
+		});
 	});
 });

@@ -1,6 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: sans-serif;
-	padding: 15px;
+	padding: 16px;
+    padding-bottom: 8px;
 }
 
 main {
