@@ -1,27 +1,25 @@
 body {
-  font-family: sans-serif;
-  padding: 15px;
-  width: 250px;
+	font-family: sans-serif;
+	padding: 15px;
+}
+
+main {
+	display: flex;
+    gap: 32px;
+}
+
+div {
+	width: 100px;
 }
 
 label {
-  display: block;
-  margin-top: 10px;
+	display: block;
 }
 
 input {
-  width: 100%;
-}
-
-button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 8px;
-  font-weight: bold;
+	width: 100%;
 }
 
 #result {
-  margin-top: 15px;
-  font-size: 1.2em;
-  font-weight: bold;
+	margin-bottom: 0;
 }
