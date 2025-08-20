@@ -1,11 +1,11 @@
 {
-    "manifest_version": 3,
-    "name": "Calcul de l'heure de départ",
-    "version": "1.0",
-    "description": "Calcule l'heure de départ du travail.",
+	"manifest_version": 3,
+	"name": "Workday Calculator",
+	"version": "1.0",
+	"permissions": ["scripting"],
+	"host_permissions": ["<all_urls>"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": "icon.png"
-    },
-    "permissions": []
+    }
 }
