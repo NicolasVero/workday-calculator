@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				).map(span => span.innerText);
 
 				if (hours.length < 3) {
-					return { info: "❌ Pas assez de pointages enregistrés..." };
+					return { result: "❌ Pas assez de pointages enregistrés..." };
 				}
 				
 				const [morning, lunch, afternoon] = hours;
@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 				let result = "";
 				let extra = "";
-				let info = "";
 
 				if (hours.length === 3) {
 					result = `⏱️ Départ prévu à ${theoretical_departure_str}`;
@@ -80,14 +79,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 					}
 				}
 
-				return { info, result, extra };
+				return { result, extra };
 			}
 
 			return calculate_departure_from_badgeages();
 		}
 	}, (results) => {
 		if (results && results[0] && results[0].result) {
-			const { info, result, extra } = results[0].result;
+			const { result, extra } = results[0].result;
 			document.getElementById("result").textContent = result || "";
 			document.getElementById("extra").textContent = extra || "";
 		} else {
